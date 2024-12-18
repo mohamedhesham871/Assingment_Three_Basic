@@ -7,14 +7,27 @@ namespace Assingment_Three_Basic
         static void Main(string[] args)
         {
             #region Q13- Write a program to allow the user to enter a string and print the REVERSE of it.
-            Console.WriteLine("please Enter string : ");
-            string stri = Console.ReadLine();
+            //Console.WriteLine("please Enter string : ");
+            //string stri = Console.ReadLine();
+            //StringBuilder sb = new StringBuilder();
+            //for (int i = stri.Length-1; i >=0; i--)
+            //{
+            //    sb.Append(stri[i]);
+            //}
+            //Console.WriteLine(sb.ToString());
+            #endregion
+
+            #region Q14:Write a program to allow the user to enter int and print the REVERSED of it.
+            Console.WriteLine("please Enter intger : ");
+            int number = int.Parse(Console.ReadLine());
             StringBuilder sb = new StringBuilder();
-            for (int i = stri.Length-1; i >=0; i--)
+            while(number>0)
             {
-                sb.Append(stri[i]);
+                sb.Append(number%10);
+                number /= 10;
             }
-            Console.WriteLine(sb.ToString());
+            Console.WriteLine(int.Parse(sb.ToString()));
+
             #endregion
         }
     }
