@@ -31,23 +31,46 @@ namespace Assingment_Three_Basic
             #endregion
 
             #region Q15: Write a program in C# Sharp to find prime numbers within a range of numbers
-            Console.WriteLine("enter Starting number");
-            int Start = int.Parse(Console.ReadLine());
-             Console.WriteLine("enter Ending number");
-            int end = int.Parse(Console.ReadLine());
-            Console.WriteLine($"The prime number between {Start} and {end} are :");
-            for(int x=Start; x<=end;x++)
+            //Console.WriteLine("enter Starting number");
+            //int Start = int.Parse(Console.ReadLine());
+            // Console.WriteLine("enter Ending number");
+            //int end = int.Parse(Console.ReadLine());
+            //Console.WriteLine($"The prime number between {Start} and {end} are :");
+            //for(int x=Start; x<=end;x++)
+            //{
+            //    bool falg = false;
+            //    for(int i=2;i<x;i++)
+            //    {
+            //        if(x%i==0)
+            //        {  falg = true; break; }
+            //    }
+            //    if (!falg && x>1)
+            //        Console.Write($"{x} ");
+
+            //}
+            #endregion
+
+            #region Q16:Write a program in C# Sharp to convert a decimal number into binary without using an array
+            Console.WriteLine("enter number to convert it to Binary ");
+            int x=int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            while (x>0)
             {
-                bool falg = false;
-                for(int i=2;i<x;i++)
+                
+                 if (x / 2.0 == x / 2)
                 {
-                    if(x%i==0)
-                    {  falg = true; break; }
+                    sb.Insert(0, 0);
                 }
-                if (!falg && x>1)
-                    Console.Write($"{x} ");
+                else
+                {
+                    sb.Insert(0, 1);
+                }
+                x /= 2;
+             
 
             }
+            int Binrynumber =int.Parse(sb.ToString());
+            Console.WriteLine($"The Binary of {x} is {Binrynumber}");
             #endregion
         }
     }
